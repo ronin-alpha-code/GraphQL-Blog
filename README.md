@@ -1,25 +1,70 @@
-# README
+# GraphQL Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the GraphQL Blog project! This project is a simple blog application built with GraphQL.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- Create, read, update, and delete blog posts
+- User authentication and authorization
+- Comment on posts
+- Like and unlike posts
 
-* System dependencies
+## Technologies Used
 
-* Configuration
+- Ruby on Rails
+- Sqlite3
+- GraphQL
 
-* Database creation
+## Getting Started
+  This project will be developed in multiple stages. Currently following stages are done.
+  - Initialisation of project
+  - User creation through seed and GraphQl setup.
+  - GraphQl Engine mount and testing on localhost
+### Prerequisites
 
-* Database initialization
+- Ruby on Rails
+- Sqlite3
+- GraphQL
 
-* How to run the test suite
+### Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Clone the repository:
+  ```sh
+  git clone https://github.com/your-username/graphql_blog.git
+  ```
+2. Navigate to the project directory:
+  ```sh
+  cd graphql_blog
+  ```
+3. Install dependencies:
+  ```sh
+  bundle install
+  ```
 
-* Deployment instructions
+### Running the Application
 
-* ...
-# GraphQL-Blog
+1. Start the rails server:
+  ```sh
+  rails server or rails s
+  ```
+
+
+### Usage
+
+- Open your browser and navigate to `http://localhost:4000/graphiql` to access the GraphQL playground.
+- Use the playground to interact with the GraphQL API.
+
+## Contributing
+
+Currently not accepting any contribution. Please do not create any PR
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+- Author: Abhishek Jaiswal
+- Email: jaiswalabhishek0802@gmail.com
+
+Enjoy using the GraphQL Blog!
