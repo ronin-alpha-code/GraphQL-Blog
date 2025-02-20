@@ -19,12 +19,17 @@ Welcome to the GraphQL Blog project! This project is a simple blog application b
   This project will be developed in multiple stages. Currently following stages are done.
   - Initialisation of project
   - User creation through seed and GraphQl setup.
-  - GraphQl Engine mount and testing on localhost
+  - GraphQl Engine mount and testing on localhost.
+  - Added JWT to perform token based authorixation in application.
+  - Added Login and SignUp methods as mutations and token generation.
+  - Handled Errors.
+  - Added validations in User model.
 ### Prerequisites
 
 - Ruby on Rails
 - Sqlite3
 - GraphQL
+- JWT for token based authentication.
 
 ### Installation
 
@@ -51,7 +56,7 @@ Welcome to the GraphQL Blog project! This project is a simple blog application b
 
 ### Usage
 
-- Open your browser and navigate to `http://localhost:4000/graphiql` to access the GraphQL playground.
+- Open your browser and navigate to `http://localhost:3000/graphiql` to access the GraphQL playground.
 - Use the playground to interact with the GraphQL API.
 
 ## Contributing
