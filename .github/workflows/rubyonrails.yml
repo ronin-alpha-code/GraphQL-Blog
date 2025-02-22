@@ -35,7 +35,6 @@ jobs:
           bundler-cache: true
       - name: Update dependencies
         run: |
-          bundle config unset deployment
           bundle install --jobs 4 --retry 3
       - name: Set up database schema
         run: bin/rails db:schema:load

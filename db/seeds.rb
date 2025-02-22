@@ -18,5 +18,21 @@ USERS = [
 USERS.each do |data| 
   user = User.find_or_initialize_by(data)
   user.password = 'password'
-  user.save!
+  user.save
+end
+
+## Seeeded Blogs
+BLOGS = [
+  { title: 'First Blog', content: 'This is the content of the first blog.' },
+  { title: 'Second Blog', content: 'This is the content of the second blog.' },
+  { title: 'Third Blog', content: 'This is the content of the third blog.' },
+  { title: 'Fourth Blog', content: 'This is the content of the fourth blog.' },
+  { title: 'Fifth Blog', content: 'This is the content of the fifth blog.' }
+]
+
+user_ids = User.pluck(:id)
+
+BLOGS.each do |data|
+  data[:user_id] = user_ids.sample
+  Blog.create!(data)
 end

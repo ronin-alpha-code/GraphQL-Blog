@@ -14,8 +14,15 @@ module Types
       "Hello World"
     end
 
+    ## Mutations for users
     field :login, mutation: Mutations::Users::Login
     field :create_user, mutation: Mutations::Users::CreateUser
     field :update_user, mutation: Mutations::Users::UpdateUser
+    field :destroy_user, mutation: Mutations::Users::DestroyUser
+
+    ## Mutations for blogs
+    field :create_blog, mutation: Mutations::Blogs::CreateBlog
+    field :update_blog, mutation: Mutations::Blogs::UpdateBlog
+    field :destroy_blog, mutation: Mutations::Blogs::DestroyBlog
   end
 end
