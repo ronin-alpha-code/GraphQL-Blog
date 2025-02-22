@@ -68,4 +68,5 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+  ENV['SECRET_KEY_BASE'] = "80b209099a24584c180155e2fe87a42e0c546bb16bb21f1fb78147d3ffc1ada4e69f1dcafaedd00e5d1fd90a7bd5697bd160e7c4cf96cf1d6705b87858ff4e1a"
 end

@@ -16,5 +16,6 @@ module Types
 
     field :login, mutation: Mutations::Users::Login
     field :create_user, mutation: Mutations::Users::CreateUser
+    field :update_user, mutation: Mutations::Users::UpdateUser
   end
 end
