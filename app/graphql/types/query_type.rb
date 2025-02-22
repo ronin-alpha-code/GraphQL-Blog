@@ -3,17 +3,19 @@ module Types
     # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
     include GraphQL::Types::Relay::HasNodeField
     include GraphQL::Types::Relay::HasNodesField
+    include JwtAuthentication::ValidateJsonWebToken
 
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
     # TODO: remove me
     field :user, Types::UserType, null: false do
-      argument :id, ID, required: true
+      argument :token, String, required: true
     end
 
-    def user(id:)
-      User.find(id)
+    def user(token:)
+      token = validate_json_web_token(token)
+      User.find(token['id'])
     end
     
     field :test_field, String, null: false,

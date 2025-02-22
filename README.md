@@ -24,6 +24,8 @@ Welcome to the GraphQL Blog project! This project is a simple blog application b
   - Added Login and SignUp methods as mutations and token generation.
   - Handled Errors.
   - Added validations in User model.
+  - Added encoding and decoding of jwt for session control.
+  - Added token handling for user crud operation.
 ### Prerequisites
 
 - Ruby on Rails
