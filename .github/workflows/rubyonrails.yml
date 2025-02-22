@@ -34,9 +34,9 @@ jobs:
           bundle config unset deployment
           bundle install --jobs 4 --retry 3
       - name: Set up database schema
-        run: bin/rails db:schema:load
-      - name: Run Database migrations
         run: |
-          bin/rails db:migrate RAILS_ENV=test
+          bin/rails db:create
+          bin/rails db:migrate
+          bin/rails db:seed
       - name: Run tests
-        run: bin/rake
+        run: bin/rails test
