@@ -50,3 +50,4 @@ gem "graphiql-rails"
 
 gem "sprockets-rails", "~> 3.5"
 gem "jwt"
+gem "rubocop"
