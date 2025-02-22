@@ -26,7 +26,7 @@ module Mutations
           success_message_response = JSON.parse({ message: 'User created successfully' }.to_json)
           meta << success_message_response
           # Generate a JWT token with user_id and expiration time
-          token = JWT.encode({ user_id: user.id, exp: 10.minutes }, 'secret', 'HS256')
+          token = token = JwtAuthentication::AuthenticateJwtToken.encode(user.id)
           # Return the user and token information
             { user: user, token: token, meta: meta.as_json }
           else

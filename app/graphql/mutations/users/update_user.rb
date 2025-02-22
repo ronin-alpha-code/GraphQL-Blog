@@ -2,7 +2,6 @@ module Mutations
   module Users
     class UpdateUser < BaseMutation
       # Define the required arguments for the mutation
-      include JwtAuthentication::ValidateJsonWebToken
 
       argument :token, String, required: true
       argument :first_name, String, required: false

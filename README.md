@@ -26,6 +26,7 @@ Welcome to the GraphQL Blog project! This project is a simple blog application b
   - Added validations in User model.
   - Added encoding and decoding of jwt for session control.
   - Added token handling for user crud operation.
+  - Added CRUD operations and model for Blogs.
 ### Prerequisites
 
 - Ruby on Rails

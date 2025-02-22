@@ -6,6 +6,7 @@ module Types
     field :last_name, String, null: false
     field :phone_number, String, null: true
     field :full_name, String, null: false
+    field :blogs, [Types::BlogType], null: true
 
     def full_name
       [object.first_name, object.last_name].join(' ')
