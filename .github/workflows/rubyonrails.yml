@@ -21,7 +21,7 @@ jobs:
           - "3306:3306"
     env:
       RAILS_ENV: test
-      DATABASE_URL: "sqlite3::memory:"
+      DATABASE_URL: "sqlite3:db/test.sqlite3"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -38,5 +38,7 @@ jobs:
           bin/rails db:create
           bin/rails db:migrate
           bin/rails db:seed
+      - name: Check for pending migrations
+        run: bin/rails db:migrate:status
       - name: Run tests
         run: bin/rails test
